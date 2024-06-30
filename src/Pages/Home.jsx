@@ -3,7 +3,8 @@ import Hero from "../Components/Hero";
 
 const Home = () => {
   return (
-    <div>
+    <div className="w-full h-full">
+      
       <Hero />
     </div>
   );
