@@ -1,6 +1,9 @@
 import React, { useCallback, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useStateContext } from "../Context/ContextProvider";
+import { navList } from "../Utils/dummy";
+import { GoSun } from "react-icons/go";
+import { IoMoonOutline } from "react-icons/io5";
 
 function Navbar() {
   const {
@@ -10,6 +13,8 @@ function Navbar() {
     setScreenSize,
     showNavBtn,
     setShowNavBtn,
+    isDarkMode,
+    toggleDarkMode,
   } = useStateContext();
 
   const handleResize = useCallback(() => {
@@ -26,28 +31,40 @@ function Navbar() {
   }, [handleResize]);
 
   useEffect(() => {
-    const shouldShowNavBtn = screenSize <= 1100;
+    const shouldShowNavBtn = screenSize <= 900;
     setShowNavBtn(shouldShowNavBtn);
     setIsActiveMenu(false);
   }, [screenSize, setShowNavBtn, setIsActiveMenu]);
 
   return (
-    <div className="h-20 bg-black w-full fixed top-0 left-0 text-white flex items-center justify-between font-plus px-10">
+    <div className="h-20 bg-transparent w-full fixed top-0 left-0 text-text flex items-center justify-between font-plus px-10 z-[11]">
       <div>
         <NavLink
           to="/"
-          className="uppercase text-[20px] font-plus leading-none font-semibold tracking-tighter"
+          className="uppercase text-[20px] font-plus leading-none text-red-500 font-semibold mix-blend-difference tracking-tighter"
         >
           Mi akash
         </NavLink>
       </div>
-      <div className="absolute left-1/2 transform -translate-x-1/2">
-        <div className="bg-white w-4 h-4 rounded-full" />
+      <div className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer">
+        {isDarkMode ? (
+          <div
+            onClick={toggleDarkMode}
+          >
+            <GoSun className="text-white w-5 h-5"/>
+          </div>
+        ) : (
+          <div
+            onClick={toggleDarkMode}
+          >
+            <IoMoonOutline className="text-gray w-5 h-5"/>
+          </div>
+        )}
       </div>
-      <div className="relative">
+      <div className="relative ">
         {showNavBtn ? (
           <button
-            className="absolute right-0 flex flex-col items-center bg-white justify-center w-14 h-14 rounded-full pointer-events-auto z-[57]"
+            className="absolute -top-5 -right-5 flex flex-col items-center bg-secondary justify-center w-14 h-14 rounded-full pointer-events-auto z-[0]"
             onClick={() => setIsActiveMenu(!isActiveMenu)}
           >
             <span
@@ -63,26 +80,14 @@ function Navbar() {
           </button>
         ) : (
           <ul className="flex gap-8">
-            <li>
-              <NavLink exact to="/work" activeClassName="text-yellow-500">
-                Work
-              </NavLink>
-            </li>
-            <li>
-              <NavLink exact to="/about" activeClassName="text-yellow-500">
-                About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink exact to="/playground" activeClassName="text-yellow-500">
-                Playground
-              </NavLink>
-            </li>
-            <li>
-              <NavLink exact to="/contact" activeClassName="text-yellow-500">
-                Contact
-              </NavLink>
-            </li>
+            {navList.map((List, index) => (
+              <li
+                key={index}
+                className="capitalize text-gray dark:text-white font-medium hover:text-secondary dark:hover:text-secondary"
+              >
+                <NavLink to={`/${List}`}>{List}</NavLink>
+              </li>
+            ))}
           </ul>
         )}
       </div>

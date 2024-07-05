@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: 'class',
   theme: {
     extend: {
         fontFamily: {
@@ -14,7 +15,17 @@ export default {
         "footer-texture": "url('/img/footer-texture.png')",
       },
       colors: {
+        'main-bg': '#FAFBFB',
+        'main-dark-bg': '#20232A',
+        'secondary-dark-bg': '#33373E',
+        'light-gray': '#F7F7F7',
+        'half-transparent': 'rgba(0, 0, 0, 0.5)',
+        // secondary: '#F0281E',
+        secondary: '#ff375f',
+        // secondary: '#ff0436',
         lightGreen: '#D9FF06',
+        background: "#fff",
+        text: "#000",
         gray: '#16171A',
         black: '#0F0F0F',
         white: '#F9F7F4',

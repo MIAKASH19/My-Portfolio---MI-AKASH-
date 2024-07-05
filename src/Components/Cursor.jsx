@@ -57,7 +57,7 @@ const Cursor = ({ hoveredCard }) => {
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 w-2 h-2 bg-[#F0281E] rounded-full pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 overflow-hidden "
+      className="fixed top-0 left-0 w-3 h-3 bg-secondary rounded-full pointer-events-none z-50 transform -translate-x-1/2 -translate-y-1/2 overflow-hidden "
     >
       <div
         ref={textRef}

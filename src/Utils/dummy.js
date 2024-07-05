@@ -1,9 +1,10 @@
 export const SideNavItems = [
     { title: "Home", href: "/" },
     { title: "Work", href: "/work" },
-    { title: "Agency", href: "/agency" },
-    { title: "Services", href: "/services" },
+    { title: "About", href: "/about" },
+    { title: "Playground", href: "/playground" },
     { title: "Contact", href: "/contact" },
   ];
   
-  export const SocialLink = ["awwards", "linkedIn", "dribble", "instragram"];
+  export const SocialLink = ["Facebook", "linkedIn", "dribble", "instragram"];
+  export const navList = ["work", "about", "playground", "contact"];
