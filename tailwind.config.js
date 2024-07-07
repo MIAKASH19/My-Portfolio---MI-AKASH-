@@ -34,6 +34,7 @@ export default {
         lightBlue: '#BAC4E2'
       }, 
       width: {
+        200: '200px',
         400: '400px',
         760: '760px',
         780: '780px',
