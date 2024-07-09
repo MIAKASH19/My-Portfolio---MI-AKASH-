@@ -29,20 +29,20 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-full min-h-screen bg-white dark:bg-gray flex items-start flex-col justify-between overflow-hidden">
+    <section className="w-full min-h-screen bg-white dark:bg-gray flex items-center flex-col justify-between overflow-x-hidden">
       <div className="mt-24 dark:bg-gray-700 px-5">
         <div className="first">
-          <h1 className=" text-[13vw] uppercase text-black dark:text-white font-plus leading-none font-medium tracking-tighter flex items-center">
+          <h1 className=" text-[13vw] uppercase text-black text-center dark:text-white font-poppins leading-none font-semibold tracking-tight flex items-center">
             Developer
           </h1>
         </div>
         <div className="second">
-          <h1 className=" text-[13vw] uppercase text-black dark:text-white font-plus leading-none font-medium tracking-tighter flex items-center">
-            Designer 
+          <h1 className=" text-[13vw] uppercase text-black dark:text-white font-poppins leading-none font-semibold tracking-tight flex items-center">
+            & Designer 
           </h1>
         </div>
       </div>
-      <div className="second w-full flex justify-end items-baseline mt-10 px-10">
+      <div className="second w-full flex justify-center items-baseline mt-10 px-10">
         <h6 className="third mb-0 capo text-end text-[1.5vw] text-black w-1/2 dark:text-slate-200 font-plus leading-tight font-medium dark:font-light tracking-normal">
           Delivering comprehensive digital experiences by merging creative
           design and advanced development techniques
