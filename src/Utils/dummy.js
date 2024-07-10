@@ -47,3 +47,22 @@ export const SideNavItems = [
       color: "#88A28D"
     }
   ]
+
+  export const ServiceText = [
+    {
+      id: "01",
+      heading: "Front end development / engineering"
+    },
+    {
+      id: "02",
+      heading: "Creative Implementation"
+    },
+    {
+      id: "03",
+      heading: "Web Animation"
+    },
+    {
+      id: "04",
+      heading: "Interactive Design"
+    }
+  ]

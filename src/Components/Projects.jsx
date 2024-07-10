@@ -12,10 +12,10 @@ const Projects = () => {
   })
 
   return (
-    <section className="relative bg-red-500 w-full dark:bg-gray text-black dark:text-white flex flex-col items-center justify-center">
+    <section className="relative bg-white w-full dark:bg-gray text-black dark:text-white flex flex-col items-center justify-center">
       <div className="h-[100vh] sticky top-0 flex flex-col items-center justify-center">
-        <h1 className="text-[26vw] leading-none font-bold tracking-tight font-poppins uppercase">
-          Work
+        <h1 className="text-[20vw] leading-none font-bold tracking-tight font-poppins uppercase">
+          Projects
         </h1>
       </div>
       {projects.map((project, index) => {

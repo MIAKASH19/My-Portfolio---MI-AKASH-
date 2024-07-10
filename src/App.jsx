@@ -12,7 +12,7 @@ import { AnimatePresence } from "framer-motion";
 import SideMenu from "./Components/SideMenu";
 import Loader from "./Components/Loader";
 import { gsap } from "gsap";
-import Lenis from "@studio-freight/lenis/types";
+import Lenis from "@studio-freight/lenis";
 
 const App = () => {
   const { isActiveMenu } = useStateContext();
