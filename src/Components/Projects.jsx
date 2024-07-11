@@ -20,7 +20,7 @@ const Projects = () => {
       </div>
       {projects.map((project, index) => {
         const targetScale = 1 - ((projects.length - index) * 0.05);
-        return <Card key={index} index={index} {...project} progress={scrollYProgress} range={[index * .24, 1]} targetScale={targetScale}/>;
+        return <Card key={index} index={index} {...project} progress={scrollYProgress} range={[index * .16, 1]} targetScale={targetScale}/>;
       })}
     </section>
   );

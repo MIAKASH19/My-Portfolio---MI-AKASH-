@@ -78,21 +78,57 @@
 
 // export default ImageRow;
 
-import React from "react";
-import { MdArrowOutward } from "react-icons/md";
+import React, { useRef, useEffect } from "react";
+import { IoAddSharp } from "react-icons/io5";
+import { gsap } from "gsap";
 
 const ImageRow = ({ item, index }) => {
+  const overlayRef = useRef();
+  const containerRef = useRef();
+
+  useEffect(() => {
+    const overlay = overlayRef.current;
+    const container = containerRef.current;
+
+    // Create a GSAP timeline for the hover animation
+    const tl = gsap.timeline({ paused: true });
+
+    tl.to(overlay, {
+      top: 0,
+      duration: 0.5,
+      ease: "power3.out"
+    });
+
+    // Add hover event listeners
+    const handleMouseEnter = () => tl.play();
+    const handleMouseLeave = () => tl.reverse();
+
+    container.addEventListener("mouseenter", handleMouseEnter);
+    container.addEventListener("mouseleave", handleMouseLeave);
+
+    // Cleanup event listeners on unmount
+    return () => {
+      container.removeEventListener("mouseenter", handleMouseEnter);
+      container.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, [index]);
+
   return (
     <div
-      className={`w-full h-20  flex items-center justify-between pl-10 font-plus text-gray dark:text-white border-b-2`}
+      ref={containerRef}
+      className={`w-full h-20 relative flex items-center justify-between  pl-10 py-14 pr-7 font-plus text-gray dark:text-white border-b-[1px] border-slate-700 overflow-hidden cursor-pointer`}
     >
-      <div className="flex items-center justify-between gap-8">
+      <div className="flex items-center justify-between gap-8 z-[50]">
         <p className="">{item.id}</p>
-        <h1 className="text-2xl uppercase">{item.heading}</h1>
+        <h1 className="text-xl uppercase">{item.heading}</h1>
       </div>
-      <button className="bg-transparent border-[1px] border-black dark:border-white text-black dark:text-white w-16 h-16 flex items-center justify-center rounded-full">
-        <MdArrowOutward className="text-2xl"/>
+      <button className="bg-transparent border-[1px] border-black dark:border-white text-black dark:text-white w-16 h-16 flex items-center justify-center rounded-full z-[50]">
+        <IoAddSharp className="text-2xl" />
       </button>
+      <div
+        ref={overlayRef}
+        className="absolute top-[103%] left-0 w-full h-full bg-secondary z-[49]"
+      />
     </div>
   );
 };

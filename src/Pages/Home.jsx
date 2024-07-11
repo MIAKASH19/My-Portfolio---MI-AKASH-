@@ -5,6 +5,7 @@ import BlockContainer from "../Components/BlockContainer";
 import Projects from "../Components/Projects";
 import Text from "../Components/Text";
 import Services from "../Components/Services";
+import Approach from "../Components/Approach";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       {/* <Text /> */}
       <Projects />
       <Services />
+      <Approach />
     </div>
   );
 };

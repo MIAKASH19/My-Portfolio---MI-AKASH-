@@ -32,7 +32,6 @@ const App = () => {
   });
 
   useEffect(() => {
-    // Simulate a network request
     const timer = setTimeout(() => {
       gsap.to(loaderRef.current, {
         y: "-100%", // Move loader to the top
@@ -43,9 +42,8 @@ const App = () => {
           setLoading(false);
         },
       });
-    }, 500); // 0.5 seconds
+    }, 500); 
 
-    // Cleanup the timeout if the component unmounts
     return () => clearTimeout(timer);
   }, []);
 
