@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useStateContext } from "../Context/ContextProvider";
 import { navList } from "../Utils/dummy";
@@ -19,6 +19,8 @@ function Navbar() {
     toggleDarkMode,
   } = useStateContext();
 
+  const [scrollDirection, setScrollDirection] = useState("up");
+
   const handleResize = useCallback(() => {
     setScreenSize(window.innerWidth);
   }, [setScreenSize]);
@@ -37,6 +39,26 @@ function Navbar() {
     setShowNavBtn(shouldShowNavBtn);
     setIsActiveMenu(false);
   }, [screenSize, setShowNavBtn, setIsActiveMenu]);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        setScrollDirection("down");
+      } else {
+        setScrollDirection("up");
+      }
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const navAnimation = {
     initial: { x: "0" },
@@ -75,7 +97,11 @@ function Navbar() {
   );
 
   return (
-    <div className="h-20 bg-transparent w-full fixed top-0 left-0 text-text flex items-center justify-between font-plus px-10 z-[11] mix-blend-difference">
+    <div
+      className={`h-20 bg-transparent w-full fixed top-0 left-0 text-text flex items-center justify-between font-plus px-10 z-[11] mix-blend-difference transition-transform duration-500 ${
+        scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       <NavLink
         to="/"
         className="uppercase w-[10vw] flex whitespace-nowrap overflow-hidden text-[1.5vw] border-[1px] rounded-full px-5 py-2 font-plus leading-none text-white font-light mix-blend-difference tracking-tighter"
