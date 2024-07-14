@@ -23,8 +23,8 @@ const Services = () => {
   }, []);
 
   return (
-    <section className=" flex flex-col items-center min-h-[150vh] gap-20 dark:bg-gray bg-white pb-32">
-      <div className="flex items-center justify-center mt-64">
+    <section className=" flex flex-col items-center min-h-[120vh] gap-20 dark:bg-gray bg-white pb-32">
+      <div className="flex items-center justify-center mt-32">
         <h1 className="text-[15vw] text-gray dark:text-white font-poppins tracking-tight uppercase font-semibold">
           Services
         </h1>

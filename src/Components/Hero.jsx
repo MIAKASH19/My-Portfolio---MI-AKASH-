@@ -38,12 +38,12 @@ const Hero = () => {
         </div>
         <div className="second">
           <h1 className=" text-[13vw] uppercase text-black dark:text-white font-poppins leading-none font-semibold tracking-tight flex items-center">
-            & Designer 
+          <span className="text-secondary pr-10">&</span>Designer 
           </h1>
         </div>
       </div>
       <div className="second w-full flex justify-center items-baseline mt-10 px-10">
-        <h6 className="third mb-0 capo text-end text-[1.5vw] text-black w-1/2 dark:text-slate-200 font-plus leading-tight font-medium dark:font-light tracking-normal">
+        <h6 className="third mb-0 text-center  text-[1.5vw] text-black w-1/2 dark:text-slate-200 font-plus leading-tight font-medium dark:font-light tracking-normal">
           Delivering comprehensive digital experiences by merging creative
           design and advanced development techniques
         </h6>

@@ -13,9 +13,9 @@ const Home = () => {
     <div className="w-full h-full">
       <Hero />
       <About />
+      <Services />
       <Text />
       <Projects />
-      <Services />
       <Approach />
       <Footer />
     </div>

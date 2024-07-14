@@ -13,6 +13,7 @@ import SideMenu from "./Components/SideMenu";
 import Loader from "./Components/Loader";
 import { gsap } from "gsap";
 import Lenis from "@studio-freight/lenis";
+import CustomScrollbars from "./Components/CusromScrollbar";
 
 const App = () => {
   const { isActiveMenu } = useStateContext();
@@ -42,7 +43,7 @@ const App = () => {
           setLoading(false);
         },
       });
-    }, 500); 
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);

@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap, Power4, Elastic } from 'gsap';
 
-const MagnetoButton = () => {
+const MagnetoButton = ({text}) => {
   const magnetoRef = useRef(null);
   const magnetoTextRef = useRef(null);
 
@@ -61,23 +61,27 @@ const MagnetoButton = () => {
       ref={magnetoRef}
       className="
         rounded-full
-        w-[10vw]
-        min-w-[130px]
-        min-h-[130px]
-        max-w-[200px]
-        max-h-[200px]
-        h-[10vw]
+        w-[15vw]
+        min-w-[150px]
+        min-h-[150px]
+        max-w-[250px]
+        max-h-[250px]
+        h-[15vw]
         border-none
-        bg-secondary
         cursor-pointer
         flex
         items-center
         justify-center
-        hover:bg-white
-        hover:text-secondary
+        bg-black
+        text-secondary
+        hover:text-white
+        hover:bg-secondary
+        dark:hover:bg-secondary
+        dark:hover:text-black
+        dark:bg-white
       "
     >
-      <div ref={magnetoTextRef} className='flex text-lg font-medium tracking-tight font-plus'>AKASH</div>
+      <div ref={magnetoTextRef} className='flex text-lg font-medium tracking-tight font-plus'>{text}</div>
     </button>
   );
 };

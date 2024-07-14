@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import Card from "./Card";
 import { projects } from "../Utils/dummy";
 import { useScroll } from "framer-motion";
+import MagnetoButton from "./MagnetoButton";
 
 const Projects = () => {
 
