@@ -97,7 +97,7 @@ function Navbar() {
   );
 
   return (
-    <div
+    <nav
       className={`h-20 bg-transparent w-full fixed top-0 left-0 text-text flex items-center justify-between font-plus px-10 z-[11] mix-blend-difference transition-transform duration-500 ${
         scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
       }`}
@@ -133,7 +133,7 @@ function Navbar() {
       <div className="relative">
         {showNavBtn ? renderToggleButton() : renderNavLinks()}
       </div>
-    </div>
+    </nav>
   );
 }
 
