@@ -2,7 +2,6 @@ import gsap from "gsap";
 import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 
-// Utility function to handle both single string and array
 const normalizeNavItems = (Item) => {
   if (typeof Item === "string") {
     return [Item];

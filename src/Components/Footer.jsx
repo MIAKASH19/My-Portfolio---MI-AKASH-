@@ -3,7 +3,7 @@ import Content from './Content';
 
 export default function Footer() {
   return (
-    <div 
+    <footer 
         className='relative h-screen'
         style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}
     >
@@ -12,6 +12,6 @@ export default function Footer() {
                 <Content />
             </div>
         </div>
-    </div>
+    </footer>
   )
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef } from "react";
 import ImageRow from "./ImageRow";
+import SectionTitle from "./SectionTitle";
 import { ServiceText } from "../Utils/dummy";
 import { FiArrowDownRight } from "react-icons/fi";
 import gsap from "gsap";
@@ -13,8 +14,8 @@ const Services = () => {
 
     // Create an infinite diagonal up-and-down animation
     gsap.to(icon, {
-      x: 10, 
-      y: 10, 
+      x: 10,
+      y: 10,
       repeat: -1,
       yoyo: true,
       duration: 1,
@@ -25,10 +26,13 @@ const Services = () => {
   return (
     <section className=" flex flex-col items-center min-h-[120vh] gap-20 dark:bg-gray bg-white pb-32">
       <div className="flex flex-col items-center justify-center mt-32">
-        <h1 className="text-[15vw] text-gray dark:text-white font-poppins tracking-tight uppercase font-semibold">
+        <SectionTitle
+          className="custom-class"
+          textClassName="text-gray dark:text-white  font-poppins font-semibold tracking-tight uppercase text-[15vw]"
+        >
           Services
-        </h1>
-        <div className="w-full h-[2px] rounded-full bg-slate-300"/>
+        </SectionTitle>
+        <div className="w-full h-[2px] rounded-full bg-slate-300" />
       </div>
       <div className="flex items-start justify-center w-full">
         <div className="w-[70%] h-20 px-10 flex items-center ">
