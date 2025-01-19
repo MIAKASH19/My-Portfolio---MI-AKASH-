@@ -3,52 +3,24 @@ import gsap from "gsap";
 import React, { useRef } from "react";
 import MagnetoButton from "./MagnetoButton";
 import Items from "./Items";
+import Dennis from "../../public/images/Dennis.jpg"
 
 const Hero = () => {
   const dotRef = useRef();
   
-  useGSAP(() => {
-    gsap.from(".first", {
-      x: "-130%",
-      delay: 1.5,
-      duration: 1,
-      ease: "bounce.out",
-    });
-    gsap.from(".second", {
-      delay: 1.5,
-      x: "130%",
-      duration: 1,
-      ease: "power1.out",
-    });
-    gsap.from(".third", {
-      delay: 1.5,
-      y: "130%",
-      duration: 1,
-      ease: "power1.out",
-    });
-  }, []);
+  
 
   return (
-    <section className="w-full min-h-screen bg-white dark:bg-gray flex items-center flex-col justify-center overflow-x-hidden">
-      <div className=" dark:bg-gray-700 px-5">
-        <div className="first">
-          <h1 className="title text-[13vw] uppercase  text-center  font-poppins leading-none font-semibold tracking-tight flex items-center">
-            Developer
-          </h1>
-        </div>
-        <div className="second">
-          <h1 className="title text-[13vw] uppercase font-poppins leading-none font-semibold tracking-tight flex items-center">
-          <span className="text-secondary pr-10">&</span>Designer 
+    <section className=" section-hero w-full min-h-[105vh] bg-[#999D9E]  flex relative items-center flex-col justify-end overflow-x-hidden">
+      <div className="relative dark:bg-gray-700 px-5">
+        <div className="first bg-re-500">
+          <h1 className="title w-fit text-[12.2vw] uppercase font-poppins leading-none bg-re-500 text-white font-semibold tracking-tight border-b-2 mb-28">
+            web Developer
           </h1>
         </div>
       </div>
-      <div className="second w-full flex justify-center items-baseline mt-5 px-10">
-        <h6 className="third mb-0 text-center  text-[1.5vw] text-black w-1/2 dark:text-slate-200 font-plus leading-tight font-medium dark:font-light tracking-normal">
-          Delivering comprehensive digital experiences by merging creative
-          design and advanced development techniques
-        </h6>
-      </div>
-      <div className="flex absolute bottom-0 items-center justify-between w-full h-20 bg-gray-100 dark:bg-gray-800 px-10">
+
+      <div className="flex absolute bottom-8 items-center justify-between w-full h-20 bg-gray-100 dark:bg-gray-800 px-10">
         <h1 className="font-plus text-black dark:text-white text-md">
           Based in Bangladesh
         </h1>

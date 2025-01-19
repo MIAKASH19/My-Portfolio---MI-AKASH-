@@ -25,14 +25,15 @@ const Services = () => {
 
   return (
     <section className=" flex flex-col items-center min-h-[120vh] gap-20 dark:bg-gray bg-white pb-32">
-      <div className="flex flex-col items-center justify-center mt-32">
+      <button className="text-white px-10 py-4 font-plus font-semibold uppercase bg-secondary rounded-full mt-40">All Works</button>
+      <div className="flex flex-col items-center justify-center mt-20 ">
         <SectionTitle
           className="custom-class"
           textClassName="text-gray dark:text-white  font-poppins font-semibold tracking-tight uppercase text-[15vw]"
         >
           Services
         </SectionTitle>
-        <div className="w-full h-[2px] rounded-full bg-slate-300" />
+        {/* <div className="w-full h-[2px] rounded-full bg-slate-300" /> */}
       </div>
       <div className="flex items-start justify-center w-full">
         <div className="w-[70%] h-20 px-10 flex items-center ">

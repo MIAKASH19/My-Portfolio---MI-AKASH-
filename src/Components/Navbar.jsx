@@ -98,7 +98,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`h-[15vh] bg-transparent backdrop-blur-md w-full fixed top-0 left-0 text-text flex items-center justify-between font-plus px-10 z-[11] mix-blend-difference transition-transform duration-500 ${
+      className={`h-[15vh] bg-transparent ackdrop-blur-md w-full fixed top-0 left-0 text-text flex items-center justify-between font-plus px-10 z-[11] mix-blend-difference transition-transform duration-500 ${
         scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
       }`}
     >
