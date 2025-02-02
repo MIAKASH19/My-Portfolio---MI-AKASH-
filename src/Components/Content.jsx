@@ -20,7 +20,7 @@ const Section1 = () => {
 const Section2 = () => {
     return (
         <div className='flex justify-between w-full items-end text-white bg-red-00'>
-            <h1 className='text-[21vw] tracking-tighter font-semibold font-plus uppercase leading-none mt-0 dark:text-black text-white'>Mi akash</h1>
+            <h1 className='text-[13vw] tracking-tighter font-bold font-plus uppercase leading-none mt-0 dark:text-black text-white'>get in touch</h1>
         </div>
     )
 }

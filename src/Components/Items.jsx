@@ -48,7 +48,6 @@ const Items = ({ Item }) => {
           ref={addToRefs}
           key={index}
           to={`/${item}`}
-          target="_blank"
           className="capitalize tracking-wide relative font-plus text-white font-normal "
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={() => handleMouseLeave(index)}

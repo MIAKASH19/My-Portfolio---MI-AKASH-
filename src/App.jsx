@@ -1,19 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
 import Navbar from "./Components/Navbar";
 import Cursor from "./Components/Cursor";
-import Work from "./Pages/Work";
-import About from "./Pages/About";
-import PlayGround from "./Pages/PlayGround";
-import Contact from "./Pages/Contact";
 import { useStateContext } from "./Context/ContextProvider";
 import { AnimatePresence } from "framer-motion";
 import SideMenu from "./Components/SideMenu";
 import Loader from "./Components/Loader";
 import { gsap } from "gsap";
 import Lenis from "@studio-freight/lenis";
-import CustomScrollbars from "./Components/CusromScrollbar";
+import Routing from "./Utils/Routing";
 
 const App = () => {
   const { isActiveMenu } = useStateContext();
@@ -35,7 +29,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       gsap.to(loaderRef.current, {
-        y: "-100%", // Move loader to the top
+        y: "-100%", 
         duration: 1,
         ease: "power1.out",
         onComplete: () => {
@@ -62,15 +56,7 @@ const App = () => {
         <AnimatePresence mode="wait">
           {isActiveMenu && <SideMenu />}
         </AnimatePresence>
-        <div>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/work" element={<Work />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/playground" element={<PlayGround />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
+        <Routing />
       </div>
     </div>
   );

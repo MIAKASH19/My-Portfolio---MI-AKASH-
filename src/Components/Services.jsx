@@ -5,6 +5,8 @@ import { ServiceText } from "../Utils/dummy";
 import { FiArrowDownRight } from "react-icons/fi";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { NavLink } from "react-router-dom";
+import MagnetoButton from "./MagnetoButton";
 
 const Services = () => {
   const iconRef = useRef();
@@ -25,7 +27,9 @@ const Services = () => {
 
   return (
     <section className=" flex flex-col items-center min-h-[120vh] gap-20 dark:bg-gray bg-white pb-32">
-      <button className="text-white px-10 py-4 font-plus font-semibold uppercase bg-secondary rounded-full mt-40">All Works</button>
+      <NavLink className="mt-32" to="/work">
+        <MagnetoButton text="All Work" />
+      </NavLink>
       <div className="flex flex-col items-center justify-center mt-20 ">
         <SectionTitle
           className="custom-class"

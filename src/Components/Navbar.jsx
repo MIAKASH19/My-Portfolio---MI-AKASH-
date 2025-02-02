@@ -125,9 +125,9 @@ function Navbar() {
             <GoSun className="w-5 h-5" />
           </motion.div>
         ) : (
-          <motion.div {...iconAnimation}>
+          <div >
             <IoMoonOutline className="w-5 h-5" />
-          </motion.div>
+          </div>
         )}
       </div>
       <div className="relative">
