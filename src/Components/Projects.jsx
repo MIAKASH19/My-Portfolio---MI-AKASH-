@@ -1,16 +1,17 @@
 import React, { useRef } from "react";
 import Card from "./Card";
-import { projects } from "../Utils/dummy";
 import { useScroll } from "framer-motion";
-import MagnetoButton from "./MagnetoButton";
+import { useStateContext } from "../Context/ContextProvider";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
-
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ['start start', 'end end']
-  })
+    offset: ["start start", "end end"],
+  });
+
+  const { projects } = useStateContext();
 
   return (
     <section className="relative bg-white w-full dark:bg-gray text-black dark:text-white flex flex-col items-center justify-center">
@@ -20,10 +21,17 @@ const Projects = () => {
         </h1>
       </div>
       {projects.map((project, index) => {
-        const targetScale = 1 - ((projects.length - index) * 0.05);
-        return <Card key={index} index={index} {...project} progress={scrollYProgress} range={[index * .16, 1]} targetScale={targetScale}/>;
+        return (
+          <Link to={`/work/${index}`} key={index} className="h-[100vh] sticky top-0 flex items-center justify-center text-black dark:text-white">
+            <Card
+              {...project}
+              progress={scrollYProgress}
+              range={[index * 0.16, 1]}
+            />
+            {/* {project.title} */}
+          </Link>
+        );
       })}
-      
     </section>
   );
 };
