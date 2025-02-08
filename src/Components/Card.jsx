@@ -17,8 +17,6 @@ const Card = ({
 }) => {
   const { id } = useParams();
 
-  const { projects } = useStateContext();
-
   return (
     <motion.div
       className="relative flex flex-col w-screen h-screen rounded-[30px] origin-top px-10 py-5"
@@ -37,7 +35,7 @@ const Card = ({
       </div>
       <div className="flex items-center gap-16">
         <div className="overflow-hidden w-2/3 h-[80vh] bg-re-500 my-5 rounded-lg">
-          <img className="w-full" src={projects.link} alt="Nike" />
+          <img className="w-full" src={Nike} alt="Nike" />
         </div>
         <div className="flex flex-col items-start gap-5">
           <h1 className="font-plus text-2xl px-16 py-5 bg-zinc-400 rounded-full">
