@@ -20,7 +20,7 @@ const Hero = () => {
           </h1> */}
           <SectionTitle
           className="custom-class"
-          textClassName="text-gray dark:text-white  font-poppins font-semibold tracking-tight uppercase text-[12.2vw] leading-none border-b-2 mb-28"
+          textClassName="text-gray dark:text-white  font-almarena font-bold tracking-tight uppercase text-[12.2vw] leading-none border-b-2 mb-28"
         >
           web Developer
         </SectionTitle>

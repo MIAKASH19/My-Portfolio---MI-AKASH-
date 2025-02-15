@@ -25,16 +25,16 @@ const Text = () => {
   return (
     <section className="min-h-[180vh] relative w-full bg-white dark:bg-gray text-black dark:text-white flex flex-col items-center justify-center gap-20 py-20 ">
       <div className="sticky top-0 flex flex-col items-start justify-between px-10 gap-2  w-full">
-        <h1 className=" text-[15vw] leading-[11vw] font-bold tracking-tight font-poppins uppercase">
+        <h1 className=" text-[15vw] leading-[11vw] font-bold tracking-tight font-almarena uppercase">
           here
         </h1>
-        <h1 className=" text-[15vw] text-secondary font-normal leading-[12vw] tracking-tight font-poppins uppercase">
+        <h1 className=" text-[15vw] text-secondary font-normal leading-[12vw] tracking-tight font-almarena uppercase">
           creativity
         </h1>
-        <h1 className=" text-[15vw] leading-[12vw] font-bold tracking-tight font-poppins uppercase">
+        <h1 className=" text-[15vw] leading-[12vw] font-bold tracking-tight font-almarena uppercase">
           meets
         </h1>
-        <div className=" text-[15vw] text-secondary font-normal leading-[12vw] flex items-center justify-between tracking-tight font-poppins uppercase">
+        <div className=" text-[15vw] text-secondary font-normal leading-[12vw] flex items-center justify-between tracking-tight font-almarena uppercase">
           <h1>Coding</h1>
           <h3 className="text-[2.5vw] text-black dark:text-white text-end w-[30%] leading-none font-medium tracking-tighter font-plus capitalize ">
             I collaborate with visionary leaders to build influential brands

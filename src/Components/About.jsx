@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section className="w-full min-h-[100vh] flex items-center flex-col justify-center bg-re-500 dark:bg-gray dark:text-white font-semibold py-20">
       <div className="bg-re-500 h-[200px] flex items-center">
-        <h2 className="text-5xl font-plus font-normal tracking-tighter">About  Myself</h2>
+        <h2 className="text-5xl font-plus font-normal tracking-tighter text-[#C7FC77]">About  Myself</h2>
       </div>
       <div className="flex justify-between items-center font-plus font-normal leading-0 tracking-tighter text-center text-[3vw] px-20">
         <LineAnimation

@@ -16,7 +16,7 @@ const Projects = () => {
   return (
     <section className="relative bg-white w-full dark:bg-gray text-black dark:text-white flex flex-col items-center justify-center">
       <div className="h-[100vh] sticky top-0 flex flex-col items-center justify-center">
-        <h1 className="text-[20vw] leading-none font-bold tracking-tight font-poppins uppercase">
+        <h1 className="text-[20vw] text-[#C7FC77] font-semibold leading-none  tracking-tight font-almarena uppercase">
           Projects
         </h1>
       </div>
@@ -28,7 +28,6 @@ const Projects = () => {
               progress={scrollYProgress}
               range={[index * 0.16, 1]}
             />
-            {/* {project.title} */}
           </Link>
         );
       })}

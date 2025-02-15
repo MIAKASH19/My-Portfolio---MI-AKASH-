@@ -33,7 +33,7 @@ const Services = () => {
       <div className="flex flex-col items-center justify-center mt-20 ">
         <SectionTitle
           className="custom-class"
-          textClassName="text-gray dark:text-white  font-poppins font-semibold tracking-tight uppercase text-[15vw]"
+          textClassName="text-gray dark:text-[#bffa66]  font-almarena font-semibold tracking-tight uppercase text-[15vw]"
         >
           Services
         </SectionTitle>

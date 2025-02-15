@@ -5,10 +5,9 @@ export default {
   theme: {
     extend: {
         fontFamily: {
-          satoshi: ["Satoshi"],
+          almarena: ["Almarena"],
           plus: ["Plus Jakarta Sans"],
-          poppins: ["Almarena"],
-          machina: ['Neue Machina'],
+          manrope: ["Manrope"]
         },
       backgroundImage: {
         "hero-pattern": "url('/public/Images/hero.jpg')",
@@ -20,10 +19,7 @@ export default {
         'secondary-dark-bg': '#33373E',
         'light-gray': '#F7F7F7',
         'half-transparent': 'rgba(0, 0, 0, 0.5)',
-        secondary: '#F0281E',
-        // secondary: '#ff375f',
-        // secondary: '#ff0436',
-        lightGreen: '#D9FF06',
+        secondary: '#bffa66',
         background: "#fff",
         text: "#000",
         gray: '#16171A',
@@ -32,6 +28,8 @@ export default {
         lightWhite: '#F9F7F4',
         lightPink: '#FFD7E7',
         lightBlue: '#BAC4E2'
+        // secondary: '#ff375f',
+        // secondary: '#ff0436',
       }, 
       width: {
         200: '200px',

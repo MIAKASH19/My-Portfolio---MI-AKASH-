@@ -6,10 +6,12 @@ import About from "../Pages/About";
 import PlayGround from "../Pages/PlayGround";
 import Contact from "../Pages/Contact";
 import ProjectDetails from "../Components/ProjectDetails";
+import ScrollToTop from "./ScrollToTop";
 
 const Routing = () => {
   return (
     <div>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<Work />} />
